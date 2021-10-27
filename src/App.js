@@ -17,8 +17,8 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/login">
-            <Login />
+          <Route path="/home">
+            <Home />
           </Route>
           <Route path="/detail">
             <Detail />
@@ -27,7 +27,7 @@ function App() {
             <Profile />
           </Route>
           <Route path="/">
-            <Home />
+            <Login />
           </Route>
         </Switch>
       </Router>

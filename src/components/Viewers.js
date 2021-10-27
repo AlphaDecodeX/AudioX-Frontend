@@ -1,11 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { useHistory } from 'react-router-dom'
 function Viewers() {
+    let history = useHistory();
+    const redirect = () => {
+        history.push({
+            pathname: "/detail"
+        }
+        );
+    }
     return (
         <Container>
             <Wrap>
-                <img src="/images/fiction.png" />
+                <img src="/images/fiction.png" onClick={redirect} />
             </Wrap>
             <Wrap>
                 <img src="/images/Business.png" />

@@ -1,12 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { useHistory } from 'react-router-dom'
 function Header() {
+    let history = useHistory();
+    const redirect = () => {
+        history.push({
+            pathname: "/profile"
+        }
+        );
+    }
+
+    const redirectHome = () => {
+        history.push({
+            pathname: "/home"
+        }
+        );
+    }
+
     return (
         <Nav>
-            <Logo src="/images/Logo.svg" />
+            <Logo src="/images/Logo.svg" onClick={redirectHome} />
             <NavMenu>
-                <a>
+                <a onClick={redirectHome}>
                     <img src="/images/home-icon.svg" />
                     <span>HOME</span>
                 </a>
@@ -31,7 +46,7 @@ function Header() {
                     <span>SERIES</span>
                 </a>
             </NavMenu>
-            <UserImg src="/images/profile-pic.jpg" />
+            <UserImg src="/images/profile-pic.jpg" onClick={redirect} />
         </Nav>
     )
 }

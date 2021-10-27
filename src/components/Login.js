@@ -1,12 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useHistory } from 'react-router';
 
 function Login() {
+    let history = useHistory();
+    const redirect = () => {
+        history.push({
+            pathname: "/home"
+        }
+        );
+    }
     return (
         <Container>
             <CTA>
                 <CTALogoOne src="/images/LoginHomeAudioX.svg" />
-                <SignUp>
+                <SignUp onClick={redirect}>
                     Get In There
                 </SignUp>
                 <Description>
