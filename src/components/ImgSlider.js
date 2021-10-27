@@ -16,7 +16,7 @@ function ImgSlider() {
     return (
         <Carousel {...settings}>
             <Wrap>
-                <img src="/images/slider-1.png" />
+                <img src="/images/Slider-1.png" />
             </Wrap>
             <Wrap>
                 <img src="/images/Slider-2.gif" />
